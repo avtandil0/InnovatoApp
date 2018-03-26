@@ -1,0 +1,20 @@
+<div >
+    <button (click)="goBack()" class="btn btn-default">go back</button>
+    <div *ngIf="user">
+        <h2>{{ user.name | uppercase }}</h2>
+        <div><span>id: </span>{{user.id}}</div>
+        <div><span>email: </span>{{user.email}}</div>
+        <div><span>phone: </span>{{user.phone}}</div>
+        <div><span>username: </span>{{user.username}}</div>
+        <div><span>website: </span>{{user.website}}</div>
+        <div><span>company: </span>{{user.company.bs}}, {{user.company.catchPhrase}}, {{user.company.namebs}}</div>
+        <div><span>address:</span>
+          {{user.address.city}}, {{user.address.street}},{{user.address.suite}},
+          {{user.address.zipcode}},{{user.address.geo.lat}},{{user.address.geo.lng}}
+        </div>
+        <br>
+        <div>
+          <button  routerLink="/user/{{user.id}}/posts" class="btn btn-default">posts</button>
+        </div>
+      </div>
+</div>

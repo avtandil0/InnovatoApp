@@ -1,0 +1,8 @@
+<div>
+    <button (click)="goBack()" class="btn btn-default">go back</button>
+    <div *ngFor="let post of posts" >
+        <b>{{post.title}}</b>
+        <p>{{post.body}}</p>
+      <br>
+    </div>
+</div>

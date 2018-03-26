@@ -1,0 +1,7 @@
+<br>
+<div *ngFor="let user of users">
+  <button  type="button" class="btn btn-primary" routerLink="/user/{{user.id}}">
+    {{user.name}}
+  </button>
+  <br>
+</div>
